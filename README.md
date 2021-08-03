@@ -1,1 +1,1 @@
-# ecommerce-capacitador
+# Proyecto JaP
