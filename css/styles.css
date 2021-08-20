@@ -139,3 +139,104 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+.signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+/* Estilos del titulo*/
+h3 {
+  color: white;
+  font-weight:lighter;
+  background-color: rgb(0, 0, 0);
+  padding: 15px;
+  border-radius: 80rem;
+}
+
+.tituloInicio {
+  display: inline-block;
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+ /*Estilos boton ingresar*/
+ .botonIngresar {
+  color: #fff;
+  background-color: #000000;
+  width: 50%;
+  border: none;
+  padding: 15px 15px;
+  border-radius: 90rem;
+  margin-bottom: 10px;
+}
+
+.botonIngresar:hover {
+  color: #74e0fc;
+  background-color: rgba(0, 0, 0, 0.479);
+}
+
+.bordeFormulario {
+  border: #ffffff2c 5px solid;
+  border-radius: 4rem;
+  padding: 45px 30px 30px 30px;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+
+.inputForm {
+  width: 60%;
+  padding: 5px;
+  background-color: rgb(43, 37, 37);
+  color: white;
+  border: none;
+}
+
+hr {
+  border: 0px; height: 5px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  width: 90%;
+  overflow: hidden;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.imagenFinal {
+  display: inline-block;
+  background-color: white;
+  border: none;
+  background-position: right bottom;
+}
+
+.vendidos {
+  text-align: right;
+  color: #000000;
+}
+
+.precio {
+  color: #005f10;
+  text-align: right;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.titulo {
+  font-weight: bold;
+  color: #07004b;
+  font-size: 25px;
+}
+
+.paginaProductos {
+  background-image: url(../img/fondoProductos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
