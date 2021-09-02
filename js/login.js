@@ -4,3 +4,12 @@
 document.addEventListener("DOMContentLoaded", function(e){
 
 });
+
+ function validarLogin() {
+    let usuario = document.getElementById("usuario").value;
+
+    sessionStorage.setItem("usuarioIngresado", usuario);
+    sessionStorage.setItem("imagen", "img/profile1.png")
+ }
+
+//  sessionStorage.getItem("usuarioIngresado")

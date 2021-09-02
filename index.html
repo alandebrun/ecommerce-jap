@@ -16,53 +16,47 @@
   <style>
     html, body{
       height: 100%;
-    }
-
-    body {
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-align: center;
-      align-items: center;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      margin: 0;
-      padding: 0;
-      background-image: url(fondologin.png);
-      background-size: contain;
-      background-position: -406%;
-      background-repeat: no-repeat;
-      text-align: center;
     }
-
   </style>
 </head>
-
 <body class="text-center">
-  <div class="container p-5">
-    <!-- <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;"> -->
+  <div class="container fondoFormulario">
+    <div class="row">
+      <div class="col-md-5 col-xl-4" id="fondoFormulario">
+        <div style="min-height: 100vh" class="tituloInicio">
+            <div class="flex-center flex-column cont-centrado">
+              <form role="form" class="bordeFormulario" action="home.html" onsubmit="validarLogin()">
+               <div>
+                 <h3>INICIO DE SESIÓN</h3>
+                 <hr>
+                </div> 
+                <div class="form-group">
+                  <input class="inputForm" id="usuario" type="text" name="usuario" value="" placeholder="Usuario" required>
+                </div>
+                <div class="form-group">
+                  <input class="inputForm" type="password" name="contraseña" value="" placeholder="Contraseña" required>
+                </div>
+                <div class="form-group">
+                  <input class="botonIngresar" type="submit" name="" value="INGRESAR">
+                </div>
+                  <hr>
+                  <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+                  <hr>
+              </form>
+            </div>
+          </div>  
+      </div>
       
-      
-      <form class="bordeFormulario" action="home.html">
-        <div class="tituloInicio">
-          <h3>INICIO DE SESIÓN</h3>
+        <div class="col-md-7 col-xl-8 d-md-flex">
+          <div class="row">
+            <div><img class="imagenFinal" src="img/login.png"></div>
+          </div>
+          
         </div>
-        <hr>
-      <br>
-      <input class="inputForm" type="text" name="usuario" value="" placeholder="Usuario" required>
-      <br>
-      <br>
-      <input class="inputForm" type="password" name="contraseña" value="" placeholder="Contraseña" required>
-      <br>
-      <br>
-      <input class="botonIngresar" type="submit" name="" value="INGRESAR">
-      <hr>
-      <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-      <hr>
-      </form>
-    </div> 
+      
+    </div>
   </div>
-
-  <img class="imagenFinal" src="img/login.png">
 
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>

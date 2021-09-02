@@ -21,36 +21,80 @@
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <a class="py-2 d-none d-md-inline-block nombreUsuario" href="profile.html"></a>
+        <img class="py-2 d-none d-md-inline-block" id="fotoPerfil" src="" width="30px">
+        
       </div>
     </nav>
+    
+    <!-- Comienza codigo de entrega 2 -->
+    <div class="btnFiltros col-md-12 bg-light">
+      <div class="row">
+        <div class="col text-right">
+          <div class="btn-group btn-group-toggle mb-3" data-toggle="bottons">
+            <label class="btn btn-light active">
+              <input type="radio">Ordenar por:
+            </label>
+            <label class="btn btn-outline-secondary" id="menorMayor">
+              <input type="radio" name="options" autocomplete="off" checked>Menor Precio.
+            </label>
+            <label class="btn btn-outline-secondary" id="mayorMenor">
+              <input type="radio" name="options" autocomplete="off">Mayor Precio.
+            </label>
+            <label class="btn btn-outline-secondary" id="ordenVendidos">
+              <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-dow mr-1"></i>Más relevantes.
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>  
 
+    <div class="row justify-content-end bg-light">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <div class="col">
+          <input class="form-control" type="text" placeholder="Busca aquí tu producto por marca o modelo" id="buscador" onkeyup="buscar()">
+         </div>
+      </div>
+        <div class="col-md-5 col-sm-12 mb-1 container">
+          <div class="row container p-0 m-0">
+            <div class="col">
+              <p class="font-weight-normal text-right my-2">Precio</p>
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="min." id="rangoMinimo">
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="máx." id="rangoMaximo">
+            </div>
+            <div class="col-3 p-0">
+              <div class="btn-group" role="group">
+                <button class="btn btn-outline-success btn-block" id="btnFiltrar">Filtrar</button>
+                <button class="btn btn-outline-warning btn-sm" id="btnLimpiar">Limpiar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
      <div class="container p-5">
       <!--Acá muestro los productos-->
       <div class="row">
         <div class="list-group" id="tabla-de-datos">
         </div>
       </div>
-
-      <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-       <h4 class="alert-heading">¡A trabajar! :)</h4>
-        <p>Esta sección corresponde a: Entrega 1 (Fecha de entrega: 22/08/2021) y Entrega 2 (Fecha de entrega: 05/09/2021).</p>
-        <hr>
-        <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-      </div>
-
-
     </div> 
 
     
     <footer class="text-muted bg-light">
       <div class="container">
-        <p class="float-right">
-          <a href="#">Volver arriba</a>
+        <p class="float-right text-dark">
+          <a href="#" class="text-primary">Volver arriba</a>
         </p>
-        <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-        <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+        <p>Este sitio forma parte de Desarrollo Web - JAP - 2021</p>
+        <p>Alan de Brun</p>
       </div>
     </footer>
+    
     <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

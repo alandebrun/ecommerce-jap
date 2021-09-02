@@ -147,6 +147,24 @@ a.custom-card:hover {
   margin: auto;
 }
 
+.paginaInicioSesion {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0;
+  padding: 0;
+  /* background-image: url(../img/fondologin.png); */
+  background-size: cover;
+}
+
+#fondoFormulario {
+  background-image: url(../img/fondologin.png);
+  background-size: cover;
+}
+
 /* Estilos del titulo*/
 h3 {
   color: white;
@@ -158,9 +176,21 @@ h3 {
 
 .tituloInicio {
   display: inline-block;
-  width: 90%;
+  width: 100%;
   margin-bottom: 10px;
   padding: 10px;
+}
+
+.cont-centrado {
+  padding-bottom: 60px;
+  min-height: calc(100vh - 40px);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
  /*Estilos boton ingresar*/
@@ -210,13 +240,6 @@ a {
   font-size: 14px;
 }
 
-.imagenFinal {
-  display: inline-block;
-  background-color: white;
-  border: none;
-  background-position: right bottom;
-}
-
 .vendidos {
   text-align: right;
   color: #000000;
@@ -237,6 +260,59 @@ a {
 
 .paginaProductos {
   background-image: url(../img/fondoProductos.jpg);
-  background-size: cover;
+  background-size:inherit;
   background-repeat: no-repeat;
 }
+
+.paginaPerfil {
+  background-image: url(../img/fondoProductos.jpg);
+}
+
+.Avatar {
+  padding-top: 10px;
+}
+
+.imagenPerfil {
+  margin-bottom: 10px;
+  border: 5px black;
+}
+
+
+.fotoCambiar {
+  text-align: center;
+  /* background-color: rgba(58, 58, 58, 0.425); */
+  /* padding: 10px; */
+  border: none;
+}
+
+.eleccion {
+  padding: 20px;
+}
+
+.eleccion:hover {
+color: black;
+background-color: rgba(0, 0, 0, 0.747);
+border-radius: 50%;
+}
+
+.linkCierre {
+  color: black;
+  size: 20px;
+}
+
+/*Estilo buscador*/
+#buscador {
+  background-image: url(../img/lupa.png);
+  background-size: 25px;
+  background-position: 400px 5px;
+  border-image: 10px;
+  background-repeat: no-repeat;
+  width: 85%;
+  font-size: 16px;
+  padding: 10px 60px 10px 15px;
+  border: 1px solid rgb(153, 197, 255);
+  margin-bottom: 12px;
+}
+
+
+
