@@ -15,7 +15,7 @@
   <link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="paginaPerfil">
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
@@ -28,21 +28,108 @@
     </div>
   </nav>
 
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <main>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-md-6 col-xl-6">
+          <div class="col p-1">
+          <div class="row text-center text-lg-left pt-2"  id="imagenesProducto">
+            <img src="" id="principal">
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="" id="auxiliares">
+            </div>
+            
+          </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-6">
+          <div class="col p-1">
+            <h2 id="nombreProducto"></h2>
+            <hr>
+          </div>
+          <div class="col p-1">
+            <h4>Descripción</h4>
+            <p id="descriptionProducto"></p>
+            <hr>
+          </div>
+          <div class="col p-1">
+            <h4>Costo</h4>
+            <p id="costoProducto"></p>
+            <hr>
+          </div>
+          <div class="col p-1">
+            <h4>Moneda</h4>
+            <p id="monedaProducto"></p>
+            <hr>
+          </div>
+          <div class="col p-1">
+            <h4>Vendidos</h4>
+            <p id="ventasProducto"></p>
+            <hr>
+          </div>
+          <div class="col p-1">
+            <p id="categoriaProducto"></p>
+          </div>
+        </div>
+      </div>
+     </div>
+     
     </div>
-  </div>
-  <footer class="text-muted">
+
+    <div>
+        <details>
+        <summary type="button" class="btn btn-secondary btn-lg btn-block">Ver comentarios</summary>
+        <br>
+
+        <p id="comentarios">
+        </p>
+
+        <br>
+
+        <div class="container" id="cajaComentarios">
+          <div class="row">
+            <h4>Publica tu comentario</h4>
+              <div class="col-sm-12 text-center">
+                <p hidden id="alerta">No puedes mandar tu comentario vacio</p>
+                <p hidden id="corto">Tu comentario es demasiado corto</p>
+                  <textarea class="casillaComentarios" id="comentarioUsuario" placeholder="Escribe aquí..."></textarea>
+              </div>
+              <div class="col-sm-2"></div>
+              <div class="col-sm-4 text-center rango">
+                  <span class="fa fa-star rangoEstrella checked seleccionado" id="s1"></span>
+                  <span class="fa fa-star rangoEstrella" id="s2"></span>
+                  <span class="fa fa-star rangoEstrella" id="s3"></span>
+                  <span class="fa fa-star rangoEstrella" id="s4"></span>
+                  <span class="fa fa-star rangoEstrella" id="s5"></span>
+              </div>
+              <div class="col-sm-4 text-center">
+                  <input type="submit" id="btnEnviar" value="Enviar">
+              </div>
+              <div class="col-sm-2"></div>
+          </div>
+      </div>
+        </details>
+        
+      <br>
+      </dl>
+      <a type="button" class="btn btn-secondary btn-lg btn-block" href="products.html">Ver más productos</a>
+      </div>
+    
+    
+
+        
+  </main>
+  <footer class="text-muted bg-light">
     <div class="container">
-      <p class="float-right">
-        <a href="#">Volver arriba</a>
+      <p class="float-right text-dark">
+        <a href="#" class="text-primary">Volver arriba</a>
       </p>
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+      <p>Este sitio forma parte de Desarrollo Web - JAP - 2021</p>
+      <p>Alan de Brun</p>
     </div>
   </footer>
   <div id="spinner-wrapper">

@@ -314,5 +314,74 @@ border-radius: 50%;
   margin-bottom: 12px;
 }
 
+.paginaProductos {
+  background-image: url(../img/fondoProductos.jpg);
+}
 
+.productos:hover {
+  color: rgb(1, 64, 122);
+  background-color: rgba(0, 84, 90, 0.411);
+}
 
+.page-header {
+  font-family: 'Open Sans';
+  text-align: center;
+  font-size: 45px;
+ }
+
+ /*Estilos de la casilla comentarios*/
+ details > summary {
+  padding: 4px;
+  width: 200px;
+  background-color: #eeeeee;
+  border: none;
+  box-shadow: 1px 1px 2px #e4e3e3;
+  cursor: pointer;
+}
+
+details > p {
+  background-color: #eeeeee;
+  padding: 4px;
+  margin: 0;
+  box-shadow: 1px 1px 2px #dddddd;
+}
+
+.casillaComentarios {
+  width: 50em;
+}
+
+.checked {
+  color: orange;
+}
+
+.rango {
+  cursor: pointer;
+}
+
+#alerta, #corto {
+  color: red;
+  font-weight:bolder;
+}
+
+.img-hover {
+  width: 75px;
+}
+
+#principal {
+  width: 100%;
+}
+
+#costoProducto, #monedaProducto {
+  color: #005f10;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#categoriaProducto {
+  border-radius: 5px;
+  background-color: #0a647448;
+  width: 13%;
+  padding: 10px;
+  font-weight: bolder;
+  color: #3a1b1b;
+}

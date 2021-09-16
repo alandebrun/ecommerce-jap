@@ -12,4 +12,4 @@ document.addEventListener("DOMContentLoaded", function(e){
     sessionStorage.setItem("imagen", "img/profile1.png")
  }
 
-//  sessionStorage.getItem("usuarioIngresado")
+
