@@ -1,4 +1,4 @@
-        // JS de entrega 2
+        // Java de entrega 2
 
         const ordenarAmayor = "AZ";
         const ordenarAmenor = "ZA";

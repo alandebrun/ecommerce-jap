@@ -1,5 +1,6 @@
 var product = {};
 var comments = {};
+let productos = undefined;
 
 function galeriaImagenes(array){
 
@@ -48,10 +49,7 @@ function showComentarios(comments){
         </div>
         </div>
         <br>
-        `
-
-       
-        
+        ` 
     }
     document.getElementById("comentarios").innerHTML = htmlContentToAppend;
 }
@@ -75,7 +73,6 @@ function agregarComentario (score, comentario, user){
     </div>
     <br>
     `
-
     document.getElementById("comentarios").innerHTML += htmlContentToAppend;
 }
 
@@ -91,15 +88,41 @@ function puntaje (score) {
     return puntaje;
 }
 
+// Funcion que muestra los productos relacionados
+function productosRel(data, relatedProducts){
+    let productosRelacionados = ``;
 
+    for(let i = 0; i < relatedProducts.length; i++) {
+        let nombre = data[relatedProducts[i]].name;
+        let description = data[relatedProducts[i]].description;
+        let cost = data[relatedProducts[i]].cost;
+        let currency = data[relatedProducts[i]].currency;
+        let imgSrc = data[relatedProducts[i]].imgSrc;
+
+    productosRelacionados += `
+    <div style="width: 100px"></div>
+    <div class="card" style="width:300px">
+        <img class="card-img-top" src=`+ imgSrc +` alt="Card image">
+     <div class="card-body">
+    <h4 class="card-title">`+ nombre +`</h4>
+        <p class="card-text">`+ description +`</p>
+        <p> `+ cost + " " + currency +`</p>
+    <a href="#" class="btn btn-primary">Ver</a>
+         </div>
+    </div>
+    <br>
+        `
+        document.getElementById("productos-relacionados").innerHTML = productosRelacionados;
+    }
+
+}
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
-        if (resultObj.status === "ok")
-        {
+        if (resultObj.status === "ok"){
             product = resultObj.data;
 
             let nombreProductoHTML = document.getElementById("nombreProducto");
@@ -118,6 +141,15 @@ document.addEventListener("DOMContentLoaded", function(e){
 
             galeriaImagenes(product.images);
 
+            getJSONData(PRODUCTS_URL).then(function(resultProd){
+                if (resultProd.status === "ok"){
+                    let todosProductos = resultProd.data;
+
+                    productosRel(todosProductos, product.relatedProducts);
+        
+                }
+            });
+
         }
 
     });
@@ -132,6 +164,9 @@ document.addEventListener("DOMContentLoaded", function(e){
         }
 
     });
+
+    
+
 
     // Funcion del boton enviar que valida entradas
 
@@ -180,7 +215,12 @@ document.addEventListener("DOMContentLoaded", function(e){
 
     });});
 
-
+    document.querySelectorAll(".img-hover").forEach(elem => {
+        alert("aiudaaaa1")
+        elem.addEventListener("click", function(){
+            document.getElementById("principal").setAttribute("src", this.getAttribute("src"));
+        });
+    });
    
 });
 
