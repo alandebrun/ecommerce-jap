@@ -8,6 +8,7 @@
         var minimo = undefined;
         var maximo = undefined;
 
+
         function criterioOrden(criterio, array){
             let result = [];
             // Ordeno de menor a mayor
@@ -59,7 +60,7 @@ function showList(data){
            ((maximo === undefined) || (maximo != undefined && parseInt(cost) <= maximo))){
 
             htmlContentToAppend += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
+            <a href="product-info.html" value="${nombre}" class="list-group-item list-group-item-action">
                 <div class="row">
                     <div class="col-3">
                         <img src="` + imgSrc + `" alt="` + description + `" class="img-thumbnail">

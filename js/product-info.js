@@ -22,6 +22,7 @@ function galeriaImagenes(array){
     document.getElementById("principal").setAttribute("src", array[0]);
 }
 
+
 // Muestro los comentarios
 function showComentarios(comments){
 
