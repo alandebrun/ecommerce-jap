@@ -371,11 +371,6 @@ details > p {
   width: 100%;
 }
 
-#costoProducto, #monedaProducto {
-  color: #005f10;
-  font-weight: bold;
-  font-size: 20px;
-}
 
 #categoriaProducto {
   border-radius: 5px;

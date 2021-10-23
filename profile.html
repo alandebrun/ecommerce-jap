@@ -22,7 +22,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="profile.html">Mi perfil</a>
           <a class="dropdown-item" href="cart.html">Mi carrito</a>
-          <a class="dropdown-item" href="index.html">Cerrar Sesión</a>
+          <a class="dropdown-item" onclick="cerrarSesion()" href="index.html">Cerrar Sesión</a>
         </div>
       </div>
         <img class="py-2 d-none d-md-inline-block" id="fotoPerfil" src="" width="30px">
@@ -30,63 +30,118 @@
       
     </div>
   </nav>
-
-    <div class="container Avatar">
-        <div class="row imagenPerfil">
-          
-          <div class="col-md-3">
-            
-          </div>
-            <div class="col text-center cuadroFotoPrincipal">
-                <img id="fotoPrincipal" src="img/profile1.png" style="max-width: 300px;" alt="">
+ 
+  <div class="container pb-5">
+    <div class="text-center p-4">
+      <h2><strong>Mí Perfil</strong></h2>
+      <hr>
+    </div>
+  <div class="container pb-5">
+    <div class="text-center p-4">
+ <!-- Poner info del perfil -->
+    <div class="row">
+      <div class="col-md-7">
+        <form action="#">
+          <div class="row">
+            <div class="col">
+              <label for="nombrePerfil">Nombre</label>
+              <input type="text" class="form-control" id="nombrePerfil" placeholder="Ingrese su nombre"  disabled="true">
             </div>
-            <div class="col-md-3 text-center m-3">
-              <a class="text-center linkCierre" href="index.html"><button class="btn btn-lg btn-danger">Cerrar Sesión</button></a>
+            <div class="col">
+              <label for="apellPerfil">Apellido</label>
+              <input type="text" class="form-control" id="apellPerfil" placeholder="Ingrese su apellido"  disabled="true">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-2">
+              <label for="edadPerfil">Edad</label>
+              <input type="number" class="form-control" id="edadPerfil" placeholder="00" maxlength="2" min="0" disabled="true">
+            </div>
+            <div class="col-4">
+              <label for="telefonoPerfil">Teléfono de contacto</label>
+              <input type="number" class="form-control" id="telefonoPerfil" placeholder="Ingrese su teléfono" minlength="9" min="0" disabled="true">
+            </div>
+            <div class="col">
+              <label for="emailPerfil">Correo electrónico</label>
+              <input type="email" class="form-control" id="emailPerfil" placeholder="Ingrese su correo electrónico"  disabled="true">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+           
+          </div>
+          <br>
+          <div id="btnOpcionesPerfil">
+            <button type="submit" class="btn btn-info" onclick="editarInfo()">Editar</button>
+          </div>
+          <br>
+        </form> 
+      </div>
+      <!-- imagen principal -->
+      <div class="col-md-5">
+        <div class="text-center">
+          <div  class="rounded">
+            <img id="fotoPrincipal" src="img/profile1.png" alt="" style="width: 250px ;height: 250px ;">
           </div>
         </div>
-        <hr>
-        <h3 class="text-center">Elige un Avatar para tu perfil</h3>
-    <div class="row fotoCambiar">
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile2.png" width="150px">
-      </div>
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile3.png" width="150px">
-      </div>
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile4.png" width="150px">
-      </div>
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile5.png" width="150px">
-      </div>
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile6.png" width="150px">
-      </div>
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile7.png" width="150px">
-      </div>
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile8.png" width="150px">
-      </div>
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile9.png" width="150px">
-      </div>
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile10.png" width="150px">
-      </div>
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile11.png" width="150px">
-      </div>
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile12.png" width="150px">
-      </div>
-      <div class="col-md-2 eleccion">
-        <img class="imgCambio" src="img/profile13.png" width="150px">
       </div>
     </div>
-  </div>
-  <hr>
+    <!-- Fotos para cambiar o elegir -->
+    <details>
+      <summary type="button" class="btn btn-dark btn-lg btn-block"><h5 class="text-center">Elige un Avatar para tu perfil</h5></summary>
+            
+        <div class="row fotoCambiar">
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile2.png" width="150px">
+          </div>
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile3.png" width="150px">
+          </div>
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile4.png" width="150px">
+          </div>
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile5.png" width="150px">
+          </div>
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile6.png" width="150px">
+          </div>
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile7.png" width="150px">
+          </div>
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile8.png" width="150px">
+          </div>
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile9.png" width="150px">
+          </div>
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile10.png" width="150px">
+          </div>
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile11.png" width="150px">
+          </div>
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile12.png" width="150px">
+          </div>
+          <div class="col-md-2 eleccion">
+            <img class="imgCambio" src="img/profile13.png" width="150px">
+          </div>
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-4">
+            <label class="text-center" for="linkImagenPerfil"><h5>O subi tu foto</h5></label>
+            <input type="url" class="form-control" id="linkImagenPerfil" placeholder="Ingrese la URL de su imagen">
+          </div>
+        </div>
   
+      </details> 
+  </div>
+
+
 </body>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>

@@ -60,28 +60,33 @@ function showList(data){
            ((maximo === undefined) || (maximo != undefined && parseInt(cost) <= maximo))){
 
             htmlContentToAppend += `
-            <a href="product-info.html" value="${nombre}" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + imgSrc + `" alt="` + description + `" class="img-thumbnail">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1 titulo">`+ nombre +`</h4>
-                            <p class="precio">` + currency + " " +  cost +`</p>
-                        </div>
-                        <p class="mb-1">` + description + `</p>
-                        <br>
-                        <p class="vendidos">Vendidos `+ soldCount +` </p>
-                    </div>
-                </div>
-            </a>
-            `
+                                    <div class="col-md-4">
+                                        <div class="card md-4" style="border: 3px solid rgba(0,0,0,.125);">
+                                            <a href="product-info.html" style="color:black;text-decoration:none;">
+                                                <img src="` + imgSrc + `" alt="` + description + `" class="card-img-top img-Thumbnail">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><strong>`+ nombre +`</strong></h5>
+                                                    <p class="card-text">` + description + `</p>
+                                                </div>
+                                                <div class="card-footer">
+                                                <div class="row" >
+                                                    <div class="col">
+                                                        <p class="mb-1" style="color: rgba(0, 128, 0);"><strong>` + currency + " " +  cost +`</strong></p>
+                                                    </div>
+                                                    <div class="col">
+                                                        <small class="text-muted"> Vendidos `+ soldCount +` </small>
+                                                    </div>
+                                                </div>  
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <br>
+                                    </div>
+                                      
+                                        `
+
         }
-
-        
-        document.getElementById("tabla-de-datos").innerHTML = htmlContentToAppend;       
-
+        document.getElementById("tabla-de-datos").innerHTML = htmlContentToAppend; 
     }
     
 }

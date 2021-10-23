@@ -41,17 +41,19 @@ var getJSONData = function(url){
     });
 }
 
+//Funcion para cerrar sesion
+function cerrarSesion(){
 
-
-
+  localStorage.clear()
+}
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
 
-  document.getElementsByClassName("nombreUsuario")[0].innerHTML = sessionStorage.getItem("usuarioIngresado");
-  document.getElementById("fotoPerfil").setAttribute("src", sessionStorage.getItem("imagen"));
+  document.getElementsByClassName("nombreUsuario")[0].innerHTML = localStorage.getItem("usuarioIngresado");
+  document.getElementById("fotoPerfil").setAttribute("src", localStorage.getItem("imagen"));
 
 
 
