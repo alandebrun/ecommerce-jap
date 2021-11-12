@@ -11,6 +11,7 @@
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  
 
   <style>
     .bd-placeholder-img {
@@ -108,33 +109,41 @@
     <div>
     <h5 class="mb-3">DIRECCIÓN DE ENVIO</h5>
       <div class="row">
-        <div class="col-md-6 mb-3">
-          <label for="productName">Calle</label>
-          <input type="text" class="form-control" placeholder="" required="" value="" >
+        <div class="col-3">
+          <label for="productName">Calle*</label>
+          <input type="text" class="form-control" id="calle" placeholder="" required="" value="" >
         </div>
-                        
+        
+        <div class="col-3">
+          <label for="productName">Esquina*</label>
+          <input type="text" class="form-control" id="esquina" placeholder="" required="" value="" >
+        </div>
+
         <div class="row">
-          <div class="col-md-9 mb-3">
-              <label for="productName">Manzana - Solar</label>
-              <input class="form-control" placeholder="" required="" value="" >
+          <div class="col-9">
+              <label for="productName">Manzana - Solar*</label>
+              <input class="form-control" id="manzSol" placeholder="" required="" value="" >
           </div>
         </div>
       </div>
+      <br>
       <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="productName">Esquina</label>
-            <input type="text" class="form-control"  placeholder="" required="" value="" >
-          </div>
-      
-        <div class="row">
-          <div class="col-md-9 mb-3">
-              <label for="productName">Departamento</label>
-              <input class="form-control" placeholder="" required="" value="" >
-          </div>
+        
+        <div class="col-md-3">
+          <label for="productName">País*</label>
+          <input type="text" class="form-control"  id="pais" placeholder="" required="" value="" >
         </div>
+        <div class="col-md-5">
+          <label for="productName">Departamento*</label>
+          <input class="form-control" placeholder="" id="departamento" required="" value="" >
+      </div>
       </div>
     </div>  
-
+    <div tabindex="0" id="focusAlertaErrores"></div>
+    <div tabindex="1" id="focusAlertaErrores2"></div>
+    <p id="alertaErrores"></p>
+    <p id="alertaErrores2"></p>
+    <p id="alertaFinalizado"></p>
     <!-- Información con los costos finales-->
     <div>
       <hr class="mb-4">
@@ -158,9 +167,79 @@
                     <strong id="costoFinal">-</strong>
                   </li>
                 </ul>
-              <hr class="mb-4">
-              <button class="btn btn-primary btn-lg" type="submit">Comprar</button>
       </div>   
+        <!-- Modal y boton de comprar-->
+        <div>
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">
+            Selecciona su forma de pago
+          </button>
+        </div>
+        <br>
+        <div>
+          <button type="button" class="btn btn-success" onclick="confirmarCompra()">Finalizar compra</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Forma de pago</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div id="formaPago1">
+                  <button type="submit" class="btn btn-info" onclick="editarPagoTarjeta()">Tarjeta de crédito</button>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-5">
+                    <label for="productName">Número de tarjeta</label>
+                    <input type="text" class="form-control" id="numeroTarjeta" maxlength="16" placeholder="---- ---- ---- ----" value="" disabled="true" > 
+                  </div>
+                  <div class="col-4">
+                    <label for="productName">Vencimiento</label>
+                    <input type="text" class="form-control" id="vencimientoTarjeta" maxlength="7" placeholder="--/----" value="" disabled="true">
+                  </div>
+                  <div class="col-3">
+                    <label for="productName">CVV</label>
+                    <input type="password" class="form-control" id="codigoTarjeta" maxlength="3" placeholder="***" value="" disabled="true">
+                  </div>
+                  
+                </div>
+                <br>
+                
+                <!-- Transferencia bancaria -->
+                <div id="formaPago2">
+                  <button type="submit" class="btn btn-info"  onclick="editarPagoTransferencia()">Transferencia bancaria</button>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-5">
+                    <label for="productName">Número de cuenta</label>
+                    <input type="text" class="form-control" id="cuentaBancaria" placeholder="" value="" disabled="true">
+                  </div>
+                  <div class="col-7">
+                    <label for="productName">Banco</label>
+                    <input type="text" class="form-control" id="banco" placeholder="Ingrese el nombre del banco" value="" disabled="true">
+                  </div>
+                </div>
+                <br>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  
 
   </div>
 

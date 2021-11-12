@@ -7,7 +7,7 @@
         var listaOrdenada = undefined;
         var minimo = undefined;
         var maximo = undefined;
-
+        
 
         function criterioOrden(criterio, array){
             let result = [];
@@ -90,6 +90,8 @@ function showList(data){
     }
     
 }
+
+
 
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
